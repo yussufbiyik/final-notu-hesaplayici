@@ -6,7 +6,6 @@
     <title>Minimum Final Notu Hesaplayıcı</title>
     <link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css"/>
 </head>
-<style> .gorunmez{display: none;} </style>
 <script>
     function notHesapla() {
         const gecisNotu = Number(document.getElementById("gecis-notu").value);
@@ -28,8 +27,8 @@
     </div>
     <br>
     <button onclick="notHesapla()" id="hesapla">Minimum Final Notunu Hesapla</button>
-    <div class="gorunmez" id="sonuc">
-        Bu dersten geçmek için final sınavından en az <span id="final-notu"></span> almalısın.
+    <div id="sonuc">
+        Bu dersten geçmek için final sınavından en az <span id="final-notu">***</span> almalısın.
     </div>
 </body>
 </html>
