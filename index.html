@@ -7,6 +7,16 @@
     <link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css"/>
 </head>
 <style> .gorunmez{display: none;} </style>
+<script>
+    function notHesapla() {
+        console.log("test")
+        const gecisNotu = Number(document.getElementById("gecis-notu").value);
+        const vizeNotu = Number(document.getElementById("vize-notu").value);
+        const finalNotDeger = (5/3)*(gecisNotu-(vizeNotu*0,4));
+        const finalNotElement = document.getElementById("final-notu");
+        finalNotElement.innerHTML = finalNotDeger;
+    }
+</script>
 <body>
     <h1>Minimum Final Notu Hesaplayıcı</h1>
     <span>Vize %40, final %60 olarak hesaplanır.</span>
@@ -20,14 +30,5 @@
     <div class="gorunmez" id="sonuc">
         Bu dersten geçmek için en az final sınavından <span id="final-notu"></span> almalısın.
     </div>
-    <script>
-        function notHesapla() {
-            const gecisNotu = Number(document.getElementById("gecis-notu").value);
-            const vizeNotu = Number(document.getElementById("vize-notu").value);
-            const finalNotDeger = (5/3)*(gecisNotu-(vizeNotu*0,4));
-            const finalNotElement = document.getElementById("final-notu");
-            finalNotElement.innerHTML = finalNotDeger;
-        }
-    </script>
 </body>
 </html>
