@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimum Final Notu Hesaplayıcı</title>
+    <link rel="stylesheet" href="https://unpkg.com/axist@latest/dist/axist.min.css"/>
+</head>
+<style> .gorunmez{display: none;} </style>
+<body>
+    <h1>Minimum Final Notu Hesaplayıcı</h1>
+    <span>Vize %40, final %60 olarak hesaplanır.</span>
+    <div class="veriler">
+        <label for="gecis-notu">Geçiş Notu:</label>
+        <input type="number" name="Geçiş Notu" id="gecis-notu">
+        <label for="vize-notu">Vize Notu:</label>
+        <input type="number" name="Vize Notu" id="vize-notu">
+    </div>
+    <button onclick="notHesapla()" id="hesapla">Minimum Final Notunu Hesapla</button>
+    <div class="gorunmez" id="sonuc">
+        Bu dersten geçmek için en az final sınavından <span id="final-notu"></span> almalısın.
+    </div>
+    <script>
+        function notHesapla() {
+            const gecisNotu = Number(document.getElementById("gecis-notu").value);
+            const vizeNotu = Number(document.getElementById("vize-notu").value);
+            const finalNotDeger = (5/3)*(gecisNotu-(vizeNotu*0,4));
+            const finalNotElement = document.getElementById("final-notu");
+            finalNotElement.innerHTML = finalNotDeger;
+        }
+    </script>
+</body>
+</html>
